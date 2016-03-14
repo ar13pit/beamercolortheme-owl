@@ -23,8 +23,8 @@
 %<*driver>
 \documentclass[12pt]{ltxdoc}
 \usepackage{beamercolorthemeowl}
-\usepackage[sfdefault, light]{FiraSans}
-\usepackage{FiraMono}
+\IfFileExists{FiraSans.sty}{\usepackage[sfdefault, light]{FiraSans}}{}
+\IfFileExists{FiraMono.sty}{\usepackage{FiraMono}}{}
 \usepackage[parfill]{parskip}
 \usepackage{setspace}
   \onehalfspacing
