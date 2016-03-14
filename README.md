@@ -1,6 +1,6 @@
 # Beamer color theme `owl`
 
-> The effectiveness of a colour scheme is heavily dependent on the conditions you present in. Colours that look nice on a computer screen may be invisible projected; colours that stand out in a lit room may strain the eyes in a dark room. If possible, you should carefully choose from Beamer's wide variety of colour themes to find one that fits your presentation's individual needs.''
+> The effectiveness of a colour scheme is heavily dependent on the conditions you present in. Colours that look nice on a computer screen may be invisible projected; colours that stand out in a lit room may strain the eyes in a dark room. If possible, you should carefully choose from Beamer's wide variety of colour themes to find one that fits your presentation's individual needs.
 
 
 The above paragraph would be excellent advice, except for one thing --- only a handful of pre-selected colour themes are publicly available for Beamer. The vast majority of Beamer presentations use one of the [built-in colour themes](https://mpetroff.net/files/beamer-theme-matrix/), which are effective in some conditions but inadequate in others. The goal of this package is to reduce the number of situations you find yourself without any good colour options. `owl` is a flexible dark or light colour theme designed for maximum readability in environments where most themes fall flat.
