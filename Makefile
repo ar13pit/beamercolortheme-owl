@@ -11,7 +11,7 @@ INSTALL_DIR = $(DESTDIR)/tex/latex/beamercolorthemeowl
 DOC_DIR     = $(DESTDIR)/doc/latex/beamercolorthemeowl
 CACHE_DIR   := .latex-cache
 
-COMPILE_TEX := latexmk -output-directory=$(CACHE_DIR)
+COMPILE_TEX := latexmk -pdf -output-directory=$(CACHE_DIR)
 
 .PHONY: all sty doc install uninstall clean clean-cache clean-sty
 
