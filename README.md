@@ -9,6 +9,8 @@ The above paragraph would be excellent advice, except for one thing --- only a h
 
 ## Examples
 
+![The `owl` colour theme used with the Beamer themes `Hannover`, `Pittsburgh`, and `metropolis`](https://raw.githubusercontent.com/rchurchley/beamercolortheme-owl/master/ex/readme.jpg)
+
 
 
 ## Installation
@@ -47,7 +49,9 @@ In addition to setting the colour scheme of your slides, `owl` redefines the red
  \usecolortheme[cautious]{owl}
 ```
 
-In either case, `owl`-defined colours will be available as `OwlRed`, `OwlGreen`, `OwlBlue`, and so forth.
+In either case, `owl`-defined colours will be available as `OwlRed`, `OwlGreen`, and so forth.
+
+![`OwlRed`, `OwlGreen`, `OwlBlue`, and `OwlYellow`](https://raw.githubusercontent.com/rchurchley/beamercolortheme-owl/master/ex/colours.png)
 
 
 
