@@ -3,8 +3,6 @@ PACKAGE_SRC = beamercolorthemeowl.dtx
 PACKAGE_STY = beamercolorthemeowl.sty
 DOC_SRC     = beamercolorthemeowl.dtx
 DOC_PDF     = beamercolorthemeowl.pdf
-TEST_SRC    = colortest.tex
-TEST_PDF    = colortest.pdf
 
 DESTDIR     ?= $(shell kpsewhich -var-value=TEXMFHOME)
 INSTALL_DIR = $(DESTDIR)/tex/latex/beamercolorthemeowl
@@ -22,8 +20,6 @@ sty: $(PACKAGE_STY)
 doc: $(DOC_PDF)
 
 demo: $(DEMO_PDF)
-
-test: $(TEST_PDF)
 
 clean: clean-cache clean-sty
 
@@ -56,6 +52,3 @@ $(DOC_PDF): %.pdf: %.dtx $(PACKAGE_STY) | $(CACHE_DIR) clean-cache
 	$(COMPILE_TEX) $<
 	@cp $(CACHE_DIR)/$(notdir $@) $@
 
-$(TEST_PDF): %.pdf: %.tex $(PACKAGE_STY) | $(CACHE_DIR) clean-cache
-	$(COMPILE_TEX) $<
-	@cp $(CACHE_DIR)/$(notdir $@) $@
