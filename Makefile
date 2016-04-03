@@ -11,7 +11,7 @@ CACHE_DIR   := .latex-cache
 
 COMPILE_TEX := latexmk -pdf -output-directory=$(CACHE_DIR)
 
-.PHONY: all sty doc install uninstall clean clean-cache clean-sty
+.PHONY: all sty doc install uninstall clean clean-cache clean-sty ctan
 
 all: sty doc
 
@@ -22,6 +22,10 @@ doc: $(DOC_PDF)
 demo: $(DEMO_PDF)
 
 clean: clean-cache clean-sty
+
+ctan: clean
+	@find . -name '*.DS_Store' -type f -delete
+	zip -r beamercolorthemeowl.zip * -x *.git*
 
 install: $(PACKAGE_STY) $(DOC_PDF)
 	@mkdir -p $(INSTALL_DIR)
@@ -36,7 +40,7 @@ uninstall:
 	@rmdir $(DOC_DIR)
 
 clean-cache:
-	@rm -f $(CACHE_DIR)/*
+	@rm -Rf $(CACHE_DIR)
 
 clean-sty:
 	@rm -f $(PACKAGE_STY)
