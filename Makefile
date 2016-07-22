@@ -48,11 +48,11 @@ clean-sty:
 $(CACHE_DIR):
 	@mkdir -p $(CACHE_DIR)
 
-$(PACKAGE_STY): $(PACKAGE_SRC) $(INS) | $(CACHE_DIR) clean-cache
+$(PACKAGE_STY): $(PACKAGE_SRC) $(INS) | clean-cache $(CACHE_DIR)
 	@cd $(dir $(INS)) && latex -output-directory=$(CACHE_DIR) $(notdir $(INS))
 	@cp $(addprefix $(CACHE_DIR)/,$(PACKAGE_STY)) .
 
-$(DOC_PDF): %.pdf: %.dtx $(PACKAGE_STY) | $(CACHE_DIR) clean-cache
+$(DOC_PDF): %.pdf: %.dtx $(PACKAGE_STY) | clean-cache $(CACHE_DIR)
 	$(COMPILE_TEX) $<
 	@cp $(CACHE_DIR)/$(notdir $@) $@
 
